@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# ----------------------------------------
+# Rename dvt_check so it doesn't run again
+# ----------------------------------------
+mv dvt_check dvt_check.txt
+
+# ------------------------------------
+# Clear log
+# ------------------------------------
+rm -Rf /mnt/extsdcard/log
+mkdir /mnt/extsdcard/log
+
+# ------------------------------------
+# Execute the main script
+# ------------------------------------
+cd /mnt/extsdcard/HyperNote/
+./HyperNote.sh 2>>/mnt/extsdcard/log/errorStarter.log
